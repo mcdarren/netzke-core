@@ -614,6 +614,7 @@ Ext.apply(Netzke.FeedbackGhost.prototype, {
   showFeedback: function(msg){
     var createBox = function(s, l){
         return ['<div class="drop_flash">',
+				'<h3>Wops, there is an error</h3>',
                 '<p>',
 				s,
 				'</p>',
