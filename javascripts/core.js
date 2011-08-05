@@ -614,7 +614,7 @@ Ext.apply(Netzke.FeedbackGhost.prototype, {
   showFeedback: function(msg){
     var createBox = function(s, l){
         return ['<div class="drop_flash">',
-				'<h3>Wops, there is an error</h3>',
+				'<h3>Wops, there is an error.</h3>',
                 '<p>',
 				s,
 				'</p>',
@@ -625,7 +625,7 @@ Ext.apply(Netzke.FeedbackGhost.prototype, {
       if (!lvl) {lvl = 'notice'};
       var msgCt = Ext.DomHelper.insertFirst(document.body, {'class':'netzke-feedback'}, true);
       var m = Ext.DomHelper.append(msgCt, {html:createBox(msg,lvl)}, true);
-      m.slideIn('t').pause(900).ghost("b", {remove:true});
+      m.slideIn('t').pause(15).ghost("b", {remove:true});
     }
 
     if (typeof msg != 'string') {
