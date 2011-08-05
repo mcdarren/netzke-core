@@ -624,7 +624,7 @@ Ext.apply(Netzke.FeedbackGhost.prototype, {
       if (!lvl) {lvl = 'notice'};
       var msgCt = Ext.DomHelper.insertFirst(document.body, {'class':'netzke-feedback'}, true);
       var m = Ext.DomHelper.append(msgCt, {html:createBox(msg,lvl)}, true);
-      m.slideIn('t').pause(15).ghost("b", {remove:true});
+      m.slideIn('t').pause(15).ghost("b", {remove:false});
     }
 
     if (typeof msg != 'string') {
