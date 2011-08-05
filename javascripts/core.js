@@ -614,9 +614,9 @@ Ext.apply(Netzke.FeedbackGhost.prototype, {
   showFeedback: function(msg){
     var createBox = function(s, l){
         return ['<div class="msg">',
-                '<div class="x-box-tl"><div class="x-box-tr"><div class="x-box-tc"></div></div></div>',
-                '<div class="x-box-ml"><div class="x-box-mr"><div class="x-box-mc">', s, '</div></div></div>',
-                '<div class="x-box-bl"><div class="x-box-br"><div class="x-box-bc"></div></div></div>',
+                '<p>',
+				s,
+				'</p>',
                 '</div>'].join('');
     }
 
