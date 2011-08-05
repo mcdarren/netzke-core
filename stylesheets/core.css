@@ -7,6 +7,6 @@ This file gets loaded along with the rest of Ext library at the initial load
     position:fixed;
     left:25%;
     top:0;
-    width:300px;
+    width:900px;
     z-index:20000;
 }
