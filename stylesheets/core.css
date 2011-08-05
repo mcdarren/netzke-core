@@ -2,11 +2,4 @@
 This file gets loaded along with the rest of Ext library at the initial load
 */
 
-/* feedback */
-.netzke-feedback {
-    position:fixed;
-    left:25%;
-    top:0;
-    width:900px;
-    z-index:20000;
-}
+/* Loading the Feedback styles within alameda styles.css */
