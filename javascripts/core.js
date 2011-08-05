@@ -613,7 +613,7 @@ Netzke.FeedbackGhost = function(){};
 Ext.apply(Netzke.FeedbackGhost.prototype, {
   showFeedback: function(msg){
     var createBox = function(s, l){
-        return ['<div class="msg">',
+        return ['<div class="drop_flash">',
                 '<p>',
 				s,
 				'</p>',
