@@ -626,7 +626,7 @@ Ext.apply(Netzke.FeedbackGhost.prototype, {
                 '<p>',
 				s,
 				'</p>',
-				'<div class="hide"><a href="#" onclick="jQuery('div.drop_flash').slideUp();">close</a></div>',
+				"<div class='hide'><a href='#' onclick='jQuery('div.drop_flash').slideUp();'>close</a></div>",
                 '</div>'].join('');
     }
 	}
