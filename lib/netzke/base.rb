@@ -480,6 +480,8 @@ module Netzke
       level = flash_hash.keys.first
       raise "Unknown message level for flash" unless %(notice warning error).include?(level.to_s)
       @flash << {:level => level, :msg => flash_hash[level]}
+      logger.info "_----------------------------------------_"
+      logger.info level.inspect
     end
 
     def widget_action(action_name)
