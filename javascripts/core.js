@@ -613,7 +613,7 @@ Netzke.FeedbackGhost = function(){};
 Ext.apply(Netzke.FeedbackGhost.prototype, {
   showFeedback: function(msg){
     var createBox = function(s, l){
-	if(l == "notice" or l == "warning") {
+	if(l == "notice" || l == "warning") {
 	return ['<div class="drop_flash notice">',
                '<p>',
 			s,
@@ -627,7 +627,7 @@ Ext.apply(Netzke.FeedbackGhost.prototype, {
 				'</p>',
                 '</div>'].join('');
     }
-	};
+	}
 
     var showBox = function(msg, lvl){
       if (!lvl) {lvl = 'notice'};
