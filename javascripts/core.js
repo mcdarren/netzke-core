@@ -619,6 +619,7 @@ Ext.apply(Netzke.FeedbackGhost.prototype, {
                 '<p>',
 				s,
 				'</p>',
+				'<div class="hide"><a href="#" onclick="jQuery(".drop_flash").hide();">close</a></div>'
                 '</div>'].join('');
 	} else {
         return ['<div class="drop_flash" id="error">',
