@@ -612,7 +612,7 @@ Ext.override(Ext.Container, {
 Netzke.FeedbackGhost = function(){};
 Ext.apply(Netzke.FeedbackGhost.prototype, {
   showFeedback: function(msg){
-	console.log(msg);
+	console.log(msg.level);
     var createBox = function(s, l){
 	console.log(l);
 	if(l == "notice" || l == "warning") {
