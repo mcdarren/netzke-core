@@ -612,6 +612,8 @@ Ext.override(Ext.Container, {
 Netzke.FeedbackGhost = function(){};
 Ext.apply(Netzke.FeedbackGhost.prototype, {
   showFeedback: function(msg){
+	console.log(msg.level);
+	console.log(l);
     var createBox = function(s, l){
         return ['<div class="msg">',
                 '<div class="x-box-tl"><div class="x-box-tr"><div class="x-box-tc"></div></div></div>',
@@ -621,6 +623,8 @@ Ext.apply(Netzke.FeedbackGhost.prototype, {
     }
 
     var showBox = function(msg, lvl){
+	console.log("-----");
+	console.log(lvl);
       if (!lvl) {lvl = 'notice'};
       var msgCt = Ext.DomHelper.insertFirst(document.body, {'class':'netzke-feedback'}, true);
       var m = Ext.DomHelper.append(msgCt, {html:createBox(msg,lvl)}, true);
