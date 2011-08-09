@@ -612,18 +612,24 @@ Ext.override(Ext.Container, {
 Netzke.FeedbackGhost = function(){};
 Ext.apply(Netzke.FeedbackGhost.prototype, {
   showFeedback: function(msg){
-	console.log(msg);
     var createBox = function(s, l){
-        return ['<div class="msg">',
-                '<div class="x-box-tl"><div class="x-box-tr"><div class="x-box-tc"></div></div></div>',
-                '<div class="x-box-ml"><div class="x-box-mr"><div class="x-box-mc">', s, l, '</div></div></div>',
-                '<div class="x-box-bl"><div class="x-box-br"><div class="x-box-bc"></div></div></div>',
+	if(l == "notice" or l == "warning") {
+	return ['<div class="drop_flash notice">',
+               '<p>',
+			s,
+			'</p>',
+               '</div>'].join('');
+	} else {
+        return ['<div class="drop_flash error">',
+				'<h3>Wops, there is an error.</h3>',
+                '<p>',
+				s,
+				'</p>',
                 '</div>'].join('');
     }
+	};
 
     var showBox = function(msg, lvl){
-	console.log("-----");
-	console.log(lvl);
       if (!lvl) {lvl = 'notice'};
       var msgCt = Ext.DomHelper.insertFirst(document.body, {'class':'netzke-feedback'}, true);
       var m = Ext.DomHelper.append(msgCt, {html:createBox(msg,lvl)}, true);
