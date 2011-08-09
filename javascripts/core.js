@@ -612,7 +612,11 @@ Ext.override(Ext.Container, {
 Netzke.FeedbackGhost = function(){};
 Ext.apply(Netzke.FeedbackGhost.prototype, {
   showFeedback: function(msg){
+	console.log("-------------------");
+	console.log(msg);
     var createBox = function(s, l){
+	console.log(s);
+	console.log(l);
         return ['<div class="drop_flash">',
 				'<h3>Wops, there is an error.</h3>',
                 '<p>',
