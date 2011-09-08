@@ -12,8 +12,8 @@ require 'netzke/routing'
 %w{ models controllers }.each do |dir|
   path = File.join(File.dirname(__FILE__), 'app', dir)
   $LOAD_PATH << path
-  ActiveSupport::Dependencies.load_paths << path
-  ActiveSupport::Dependencies.load_once_paths.delete(path)
+  ActiveSupport::Dependencies.autoload_paths << path
+  ActiveSupport::Dependencies.autoload_once_paths.delete(path)
 end
 
 if defined? ActionController
@@ -30,7 +30,7 @@ if defined? ActionView
 end  
 
 # Make this plugin auto-reloadable for easier development
-ActiveSupport::Dependencies.load_once_paths.delete(File.join(File.dirname(__FILE__)))
+ActiveSupport::Dependencies.autoload_once_paths.delete(File.join(File.dirname(__FILE__)))
 
 # Include javascript & styles required by all Netzke widgets. 
 # These files will get loaded at the initial load of the framework (along with Ext).
